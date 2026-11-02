@@ -5,7 +5,7 @@ summary: A coding agent on your WSL2 machine does not need to run as you. How I 
 author: Steffen Mächtel
 featureImage:
   src: /img/blog/2026/11/giving-an-ai-agent-its-own-linux-user.svg
-  alt: Two user seats in front of one machine, both reaching the same project tree
+  alt: A person and a terminal agent, both reaching the same shared project tree on one WSL2 machine
 categories:
   - DevOps
   - Community
