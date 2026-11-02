@@ -1,5 +1,5 @@
 ---
-name: Steffen Mächtel
+name: Steffen Maechtel
 firstName: Steffen
 avatarUrl: /img/avatar/steffen.jpg
 ---
