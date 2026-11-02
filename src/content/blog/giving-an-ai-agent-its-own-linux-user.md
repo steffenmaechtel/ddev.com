@@ -25,8 +25,6 @@ On a typical WSL2 setup, an agent running as your user inherits the complete bla
 - The Docker socket, which on a default rootful installation is root-equivalent.
 - Windows interop: `/mnt/c` and the ability to run `.exe` files. On WSL2, the Linux side reaches straight into Windows; a shell command is all it takes.
 
-None of this is a hypothetical concern. [GitGuardian's agent security write-up](https://blog.gitguardian.com/ai-agent-security-best-practices/) puts it plainly: interactive coding agents usually run as the developer today, so nobody can tell afterwards which actions were the human's and which were the agent's. Excessive agency has its own entry in the [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/). The advice from all sides is the same: shrink what the agent can reach.
-
 Approval prompts don't solve this, because I stopped reading them. They had become background noise long before the agent got productive.
 
 ## The old answer from Unix
