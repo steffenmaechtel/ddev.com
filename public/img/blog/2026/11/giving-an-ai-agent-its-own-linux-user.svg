@@ -68,8 +68,8 @@
   <text x="1262" y="642" text-anchor="middle" font-size="44" font-weight="700" fill="#9ef0e4">opencode agent</text>
 
   <!-- Verbindungslinien zum geteilten Baum (dick, volle Deckkraft) -->
-  <path d="M498 512 C 634 540, 679 554, 723 556" fill="none" stroke="#ffb35c" stroke-width="7" stroke-linecap="round"/>
-  <path d="M1164 512 C 1030 540, 999 556, 958 554" fill="none" stroke="#5eead4" stroke-width="7" stroke-linecap="round"/>
+  <path d="M498 512 C 634 520, 690 534, 723 556" fill="none" stroke="#ffb35c" stroke-width="7" stroke-linecap="round"/>
+  <path d="M1164 512 C 1030 520, 990 534, 958 554" fill="none" stroke="#5eead4" stroke-width="7" stroke-linecap="round"/>
   <circle cx="719" cy="556" r="10" fill="#ffb35c"/>
   <circle cx="954" cy="556" r="10" fill="#5eead4"/>
 
