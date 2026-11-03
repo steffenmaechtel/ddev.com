@@ -6,21 +6,21 @@
       <stop offset="1" stop-color="#0e4a57"/>
     </linearGradient>
     <radialGradient id="glowDev" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#ff9a3c" stop-opacity="0.35"/>
+      <stop offset="0" stop-color="#ff9a3c" stop-opacity="0.4"/>
       <stop offset="1" stop-color="#ff9a3c" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glowAgent" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#5eead4" stop-opacity="0.3"/>
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0.35"/>
       <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="dev" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#ffc986"/>
       <stop offset="1" stop-color="#f27a1a"/>
     </linearGradient>
-    <linearGradient id="folderFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#134e5a"/>
-      <stop offset="1" stop-color="#0b3a4a"/>
-    </linearGradient>
+    <radialGradient id="folderGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
     <style>
       text { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; }
       .mono { font-family: ui-monospace, 'Cascadia Code', Menlo, monospace; }
@@ -30,70 +30,75 @@
   <rect width="1672" height="940" fill="url(#bg)"/>
 
   <!-- Titel -->
-  <text x="836" y="152" text-anchor="middle" font-size="78" font-weight="800" fill="#eaf6fa">One machine. Two users.</text>
-  <text x="836" y="214" text-anchor="middle" font-size="36" fill="#9fc3cf">An AI agent with its own Linux account</text>
+  <text x="836" y="170" text-anchor="middle" font-size="96" font-weight="800" fill="#f2fbfd">One machine. Two users.</text>
+  <text x="836" y="230" text-anchor="middle" font-size="44" fill="#d6ecee">An AI agent with its own Linux account</text>
 
-  <!-- Linke Figur: Entwickler -->
-  <ellipse cx="420" cy="440" rx="210" ry="190" fill="url(#glowDev)"/>
+  <!-- Linke Figur: Entwickler (groesser) -->
+  <ellipse cx="400" cy="450" rx="240" ry="210" fill="url(#glowDev)"/>
   <g>
-    <circle cx="420" cy="400" r="40" fill="url(#dev)"/>
-    <path d="M340 516 C362 432 478 432 500 516 Z" fill="url(#dev)"/>
+    <circle cx="400" cy="425" r="50" fill="url(#dev)"/>
+    <path d="M305 565 C337 462 463 462 495 565 Z" fill="url(#dev)"/>
   </g>
-  <text x="420" y="586" text-anchor="middle" font-size="33" font-weight="700" fill="#ffcf9a">you</text>
+  <text x="400" y="622" text-anchor="middle" font-size="44" font-weight="700" fill="#ffcf9a">you</text>
 
-  <!-- Exklusive Chips ueber dem Entwickler -->
+  <!-- Exklusive Pills als Icons (Schluessel, Windows) -->
   <g>
-    <rect x="272" y="282" rx="18" ry="18" width="146" height="44" fill="#f27a1a" fill-opacity="0.12" stroke="#f2a35c" stroke-width="1.5"/>
-    <text x="345" y="312" text-anchor="middle" font-size="25" fill="#ffc986">ssh keys</text>
-    <line x1="345" y1="326" x2="392" y2="362" stroke="#f2a35c" stroke-width="2" stroke-opacity="0.7"/>
+    <rect x="246" y="296" rx="26" ry="26" width="72" height="56" fill="#f27a1a" fill-opacity="0.16" stroke="#f2a35c" stroke-width="2.5"/>
+    <g stroke="#ffc986" stroke-width="5" fill="none" stroke-linecap="round">
+      <circle cx="268" cy="318" r="9"/>
+      <line x1="274" y1="324" x2="296" y2="346"/>
+      <line x1="290" y1="340" x2="298" y2="332"/>
+    </g>
+    <line x1="282" y1="352" x2="330" y2="388" stroke="#f2a35c" stroke-width="3"/>
 
-    <rect x="448" y="282" rx="18" ry="18" width="124" height="44" fill="#f27a1a" fill-opacity="0.12" stroke="#f2a35c" stroke-width="1.5"/>
-    <text x="510" y="312" text-anchor="middle" font-size="25" class="mono" fill="#ffc986">/mnt/c</text>
-    <line x1="510" y1="326" x2="456" y2="362" stroke="#f2a35c" stroke-width="2" stroke-opacity="0.7"/>
+    <rect x="344" y="288" rx="26" ry="26" width="72" height="56" fill="#f27a1a" fill-opacity="0.16" stroke="#f2a35c" stroke-width="2.5"/>
+    <g fill="#ffc986">
+      <rect x="366" y="308" width="13" height="13"/>
+      <rect x="382" y="308" width="13" height="13"/>
+      <rect x="366" y="324" width="13" height="13"/>
+      <rect x="382" y="324" width="13" height="13"/>
+    </g>
+    <line x1="380" y1="344" x2="392" y2="378" stroke="#f2a35c" stroke-width="3"/>
   </g>
 
-  <!-- Rechte Figur: Agent als Terminal -->
-  <ellipse cx="1252" cy="440" rx="210" ry="190" fill="url(#glowAgent)"/>
+  <!-- Rechte Figur: Agent als Terminal (groesser) -->
+  <ellipse cx="1262" cy="450" rx="240" ry="210" fill="url(#glowAgent)"/>
   <g>
-    <rect x="1157" y="352" width="196" height="138" rx="14" fill="#0b3242" stroke="#5eead4" stroke-width="2.5"/>
-    <line x1="1157" y1="386" x2="1353" y2="386" stroke="#5eead4" stroke-width="1.5" stroke-opacity="0.5"/>
-    <circle cx="1177" cy="368" r="5" fill="#5eead4" fill-opacity="0.7"/>
-    <circle cx="1194" cy="368" r="5" fill="#5eead4" fill-opacity="0.45"/>
-    <circle cx="1211" cy="368" r="5" fill="#5eead4" fill-opacity="0.25"/>
-    <text x="1177" y="444" font-size="40" class="mono" fill="#5eead4">&gt;_</text>
-    <rect x="1232" y="418" width="18" height="30" fill="#5eead4">
+    <rect x="1142" y="352" width="240" height="164" rx="16" fill="#0b3242" stroke="#5eead4" stroke-width="3"/>
+    <line x1="1142" y1="390" x2="1382" y2="390" stroke="#5eead4" stroke-width="2" stroke-opacity="0.6"/>
+    <circle cx="1166" cy="371" r="6" fill="#5eead4" fill-opacity="0.75"/>
+    <circle cx="1186" cy="371" r="6" fill="#5eead4" fill-opacity="0.45"/>
+    <circle cx="1206" cy="371" r="6" fill="#5eead4" fill-opacity="0.22"/>
+    <text x="1166" y="468" font-size="52" class="mono" fill="#7ff0dd">&gt;_</text>
+    <rect x="1246" y="432" width="22" height="36" fill="#7ff0dd">
       <animate attributeName="opacity" values="1;0.15;1" dur="1.6s" repeatCount="indefinite"/>
     </rect>
   </g>
-  <text x="1252" y="586" text-anchor="middle" font-size="33" font-weight="700" fill="#9ef0e4">opencode agent</text>
+  <text x="1262" y="618" text-anchor="middle" font-size="44" font-weight="700" fill="#9ef0e4">opencode agent</text>
 
-  <!-- Verbindungslinien zum geteilten Baum -->
-  <path d="M505 462 C 640 468 700 478 778 496" fill="none" stroke="#ffb35c" stroke-width="4.5" stroke-opacity="0.85" stroke-linecap="round"/>
-  <path d="M1167 462 C 1030 468 970 478 894 496" fill="none" stroke="#5eead4" stroke-width="4.5" stroke-opacity="0.85" stroke-linecap="round"/>
-  <circle cx="778" cy="496" r="6" fill="#ffb35c"/>
-  <circle cx="894" cy="496" r="6" fill="#5eead4"/>
+  <!-- Verbindungslinien zum geteilten Baum (dick, volle Deckkraft) -->
+  <path d="M498 488 C 630 492 690 505 738 528" fill="none" stroke="#ffb35c" stroke-width="7" stroke-linecap="round"/>
+  <path d="M1164 488 C 1030 492 970 505 934 528" fill="none" stroke="#5eead4" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="742" cy="530" r="10" fill="#ffb35c"/>
+  <circle cx="930" cy="530" r="10" fill="#5eead4"/>
 
-  <!-- Geteilter Projektbaum -->
+  <!-- Geteilter Projektbaum: gefuellt, hell, mit Glow -->
+  <ellipse cx="836" cy="540" rx="200" ry="120" fill="url(#folderGlow)"/>
   <g>
-    <path d="M766 512 l24 -0 h18 l10 12 h88 a8 8 0 0 1 8 8 v56 a8 8 0 0 1 -8 8 h-138 a8 8 0 0 1 -8 -8 v-68 a8 8 0 0 1 8 -8 z" fill="url(#folderFill)" stroke="#5eead4" stroke-width="2.5"/>
-    <rect x="806" y="502" width="42" height="30" rx="5" fill="#134e5a" stroke="#5eead4" stroke-width="1.5"/>
-    <rect x="856" y="494" width="42" height="38" rx="5" fill="#134e5a" stroke="#5eead4" stroke-width="1.5"/>
-    <text x="836" y="664" text-anchor="middle" font-size="30" font-weight="700" fill="#eaf6fa">shared project tree</text>
-    <text x="836" y="694" text-anchor="middle" font-size="22" class="mono" fill="#7fb5c0">group: opencode</text>
+    <path d="M726 476 l26 0 h20 l11 13 h107 a9 9 0 0 1 9 9 v88 a9 9 0 0 1 -9 9 h-152 a9 9 0 0 1 -9 -9 v-101 a9 9 0 0 1 9 -9 z" fill="#5eead4"/>
+    <path d="M726 476 l26 0 h20 l11 13 h107 a9 9 0 0 1 9 9 v10 h-173 v-23 a9 9 0 0 1 9 -9 z" fill="#8af5e5"/>
+    <rect x="762" y="514" width="64" height="8" rx="4" fill="#0b3a4a" fill-opacity="0.45"/>
+    <rect x="762" y="532" width="96" height="8" rx="4" fill="#0b3a4a" fill-opacity="0.45"/>
+    <rect x="762" y="550" width="48" height="8" rx="4" fill="#0b3a4a" fill-opacity="0.45"/>
   </g>
+  <text x="836" y="672" text-anchor="middle" font-size="40" font-weight="700" fill="#eaf6fa">shared project tree</text>
 
   <!-- Verbindung Baum -> Maschine -->
-  <line x1="836" y1="600" x2="836" y2="742" stroke="#7fb5c0" stroke-width="2" stroke-dasharray="6 6" stroke-opacity="0.6"/>
+  <line x1="836" y1="700" x2="836" y2="762" stroke="#8fd9cd" stroke-width="3" stroke-dasharray="7 7" stroke-opacity="0.75"/>
 
-  <!-- Die Maschine -->
+  <!-- Die Maschine: ruhig, nur WSL2 -->
   <g>
-    <rect x="436" y="748" width="800" height="108" rx="18" fill="#0a2937" stroke="#1b5a6d" stroke-width="2"/>
-    <text x="472" y="812" font-size="34" font-weight="800" fill="#eaf6fa">WSL2</text>
-    <rect x="590" y="772" rx="12" ry="12" width="110" height="46" fill="#5eead4" fill-opacity="0.1" stroke="#5eead4" stroke-width="1.5"/>
-    <text x="645" y="803" text-anchor="middle" font-size="24" fill="#9ef0e4">ddev</text>
-    <rect x="748" y="772" rx="12" ry="12" width="220" height="46" fill="#5eead4" fill-opacity="0.1" stroke="#5eead4" stroke-width="1.5"/>
-    <text x="858" y="803" text-anchor="middle" font-size="24" fill="#9ef0e4">rootless docker</text>
-    <rect x="1016" y="772" rx="12" ry="12" width="140" height="46" fill="#5eead4" fill-opacity="0.1" stroke="#5eead4" stroke-width="1.5"/>
-    <text x="1086" y="803" text-anchor="middle" font-size="24" fill="#9ef0e4">web · db</text>
+    <rect x="556" y="768" width="560" height="100" rx="20" fill="#0a2937" stroke="#2b7a8f" stroke-width="2.5"/>
+    <text x="836" y="833" text-anchor="middle" font-size="46" font-weight="800" fill="#eaf6fa">WSL2</text>
   </g>
 </svg>
