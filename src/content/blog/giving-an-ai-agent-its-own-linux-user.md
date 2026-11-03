@@ -68,7 +68,7 @@ The whole architecture fits on a napkin:
 
 The agent can do every project task I do: `ddev start`, `ddev composer`, `make tests`, `vendor/bin/runTests.sh -s [cgl|phpstan|unit|functional]`, and commit. It cannot read my SSH keys, cannot reach my home directory, cannot touch Windows, and has no path to root. Browser-opening commands like `ddev launch` and `ddev mailpit` still work, but only from my terminal.
 
-The part I did not expect: permissions inside the agent became *more* meaningful, not less. The agent's own allow/ask/deny configuration still gates what it does, and now the operating system backs it up instead of contradicting it. The prompts that remain are the ones worth reading, because they are about the task, not about the keys to the building.
+The part I did not expect: permissions inside the agent became *more* meaningful, not less. As long as the agent ran as my user, my answer to every risk was `bash: {"*": "ask"}` — approval for every command, because a single one of them could read my SSH keys on the Windows side. On its own user it cannot get there, so I could flip the rules: allow bash by default, and `ask` only for the few sensitive paths, like `auth.json`. The prompts that remain are the ones worth reading, because they are about the task, not about the keys to the building.
 
 ## What still hurts
 
