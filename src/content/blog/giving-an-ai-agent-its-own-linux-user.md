@@ -31,7 +31,7 @@ Approval prompts don't solve this, because I stopped reading them. They had beco
 
 Services on a Linux machine have not run as the admin's personal user for decades. `www-data`, `postgres`, `deploy`: every daemon gets a dedicated account with exactly the access it needs, and nobody considers that exotic. It is the default way to run untrusted or semi-trusted software on a shared machine.
 
-An **agent** that edits my code, runs my tests, and starts my containers is a new coworker on the machine, and **coworkers get their own account**.
+An **agent** that edits my code, runs my tests, and starts my containers **is a new coworker** on the machine, and **coworkers get their own account**.
 
 The obvious alternative, especially for DDEV users, is to run the agent inside the web container. I ruled that out, for a DDEV-specific reason. DDEV projects can define custom host commands in `.ddev/commands/host/`, and DDEV executes those directly on the host, as the invoking user, with no container around them. Through the shared project tree, that directory stays writable for the agent, so an agent inside the web container could still plant a command there. The boundary has to hold on the host itself.
 
