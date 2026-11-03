@@ -19,7 +19,7 @@ So I turned the question around. Instead of asking what I could withhold from th
 
 ## What an agent inherits when it runs as you
 
-On a typical WSL2 setup, an agent running as your user inherits the complete blast radius of your account:
+On a typical WSL2 setup, an agent running as your user inherits the blast radius of your account:
 
 - Your home directory: SSH keys, `.gitconfig`, credentials files, everything in `~/.ddev`, including database snapshots and any keys imported with `ddev auth ssh`.
 - The Docker socket, which on a default rootful installation is root-equivalent.
@@ -58,7 +58,7 @@ The whole architecture fits on a napkin:
 
 **One: the agent gets its own user.** My home directory is mode `750` and not group-shared, so the agent cannot read my keys or dotfiles. The agent user gets no Windows interop at all: no `/mnt/c`, no `.exe` execution. When a task needs to open something in my browser, the agent cannot do it. Only I can run that command, and then it works.
 
-**Two: DDEV runs as exactly one user, the agent's.** This is the decision that makes or breaks the setup, and it is counterintuitive, so it deserves a paragraph. DDEV is not multi-user aware; it expects one `~/.ddev`, one Docker daemon, one project list. So the agent user _owns_ DDEV completely. When I type `ddev start` in my own terminal, a shell function and a small sudoers helper re-exec it as `opencode`, with the right `HOME` and `DOCKER_HOST`. The sudoers file has four rules, all targeting `opencode`, none targeting root, none running anything as me. The result: `ddev list` in my terminal and in an agent session show the same projects, `docker ps` lists the same containers. There is one DDEV home, one daemon, no split-brain.
+**Two: DDEV runs as exactly one user, the agent's.** This is the decision that makes or breaks the setup, and it is counterintuitive, so it deserves a paragraph. DDEV is not multi-user aware; it expects one `~/.ddev`, one Docker daemon, one project list. So the agent user _owns_ DDEV. When I type `ddev start` in my own terminal, a shell function and a small sudoers helper re-exec it as `opencode`, with the right `HOME` and `DOCKER_HOST`. The sudoers file has four rules, all targeting `opencode`, none targeting root, none running anything as me. The result: `ddev list` in my terminal and in an agent session show the same projects, `docker ps` lists the same containers. There is one DDEV home, one daemon, no split-brain.
 
 **Three: the Docker backend is rootless and owned by the agent user.** DDEV has supported Docker Rootless since v1.25.0 ([blog post](podman-and-docker-rootless.md), [docs](https://docs.ddev.com/en/stable/users/install/docker-installation/)). The daemon socket lives under `/run/user/<uid>/`, owned by `opencode`. The agent can start and stop containers for our projects, but it never touches a root-equivalent socket, because there isn't one on the machine anymore.
 
