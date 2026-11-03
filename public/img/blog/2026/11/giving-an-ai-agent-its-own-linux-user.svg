@@ -34,62 +34,53 @@
   <text x="836" y="230" text-anchor="middle" font-size="44" fill="#d6ecee">An AI agent with its own Linux account</text>
 
   <!-- Linke Figur: Entwickler (groesser) -->
-  <ellipse cx="400" cy="450" rx="240" ry="210" fill="url(#glowDev)"/>
+  <ellipse cx="400" cy="474" rx="240" ry="210" fill="url(#glowDev)"/>
   <g>
-    <circle cx="400" cy="425" r="50" fill="url(#dev)"/>
-    <path d="M305 565 C337 462 463 462 495 565 Z" fill="url(#dev)"/>
+    <circle cx="400" cy="449" r="50" fill="url(#dev)"/>
+    <path d="M305 589 C337 486 463 486 495 589 Z" fill="url(#dev)"/>
   </g>
-  <text x="400" y="622" text-anchor="middle" font-size="44" font-weight="700" fill="#ffcf9a">you</text>
+  <text x="400" y="646" text-anchor="middle" font-size="44" font-weight="700" fill="#ffcf9a">you</text>
 
   <!-- Exklusive Pills als Icons (Schluessel, Windows) -->
   <g>
-    <rect x="246" y="296" rx="26" ry="26" width="72" height="56" fill="#f27a1a" fill-opacity="0.16" stroke="#f2a35c" stroke-width="2.5"/>
-    <g stroke="#ffc986" stroke-width="5" fill="none" stroke-linecap="round">
-      <circle cx="268" cy="318" r="9"/>
-      <line x1="274" y1="324" x2="296" y2="346"/>
-      <line x1="290" y1="340" x2="298" y2="332"/>
-    </g>
-    <line x1="282" y1="352" x2="330" y2="388" stroke="#f2a35c" stroke-width="3"/>
+    <rect x="216" y="298" rx="36" ry="36" width="196" height="72" fill="#f27a1a" fill-opacity="0.18" stroke="#f2a35c" stroke-width="3.5"/>
+    <text x="314" y="345" text-anchor="middle" font-size="36" font-weight="600" fill="#ffc986">ssh keys</text>
+    <line x1="314" y1="374" x2="362" y2="416" stroke="#f2a35c" stroke-width="4"/>
 
-    <rect x="344" y="288" rx="26" ry="26" width="72" height="56" fill="#f27a1a" fill-opacity="0.16" stroke="#f2a35c" stroke-width="2.5"/>
-    <g fill="#ffc986">
-      <rect x="366" y="308" width="13" height="13"/>
-      <rect x="382" y="308" width="13" height="13"/>
-      <rect x="366" y="324" width="13" height="13"/>
-      <rect x="382" y="324" width="13" height="13"/>
-    </g>
-    <line x1="380" y1="344" x2="392" y2="378" stroke="#f2a35c" stroke-width="3"/>
+    <rect x="428" y="298" rx="36" ry="36" width="184" height="72" fill="#f27a1a" fill-opacity="0.18" stroke="#f2a35c" stroke-width="3.5"/>
+    <text x="520" y="345" text-anchor="middle" font-size="36" class="mono" fill="#ffc986">/mnt/c</text>
+    <line x1="520" y1="374" x2="444" y2="416" stroke="#f2a35c" stroke-width="4"/>
   </g>
 
   <!-- Rechte Figur: Agent als Terminal (groesser) -->
-  <ellipse cx="1262" cy="450" rx="240" ry="210" fill="url(#glowAgent)"/>
+  <ellipse cx="1262" cy="474" rx="240" ry="210" fill="url(#glowAgent)"/>
   <g>
-    <rect x="1142" y="352" width="240" height="164" rx="16" fill="#0b3242" stroke="#5eead4" stroke-width="3"/>
-    <line x1="1142" y1="390" x2="1382" y2="390" stroke="#5eead4" stroke-width="2" stroke-opacity="0.6"/>
-    <circle cx="1166" cy="371" r="6" fill="#5eead4" fill-opacity="0.75"/>
-    <circle cx="1186" cy="371" r="6" fill="#5eead4" fill-opacity="0.45"/>
-    <circle cx="1206" cy="371" r="6" fill="#5eead4" fill-opacity="0.22"/>
-    <text x="1166" y="468" font-size="52" class="mono" fill="#7ff0dd">&gt;_</text>
-    <rect x="1246" y="432" width="22" height="36" fill="#7ff0dd">
+    <rect x="1142" y="376" width="240" height="164" rx="16" fill="#0b3242" stroke="#5eead4" stroke-width="3"/>
+    <line x1="1142" y1="414" x2="1382" y2="414" stroke="#5eead4" stroke-width="2" stroke-opacity="0.6"/>
+    <circle cx="1166" cy="395" r="6" fill="#5eead4" fill-opacity="0.75"/>
+    <circle cx="1186" cy="395" r="6" fill="#5eead4" fill-opacity="0.45"/>
+    <circle cx="1206" cy="395" r="6" fill="#5eead4" fill-opacity="0.22"/>
+    <text x="1166" y="492" font-size="52" class="mono" fill="#7ff0dd">&gt;_</text>
+    <rect x="1246" y="456" width="22" height="36" fill="#7ff0dd">
       <animate attributeName="opacity" values="1;0.15;1" dur="1.6s" repeatCount="indefinite"/>
     </rect>
   </g>
-  <text x="1262" y="618" text-anchor="middle" font-size="44" font-weight="700" fill="#9ef0e4">opencode agent</text>
+  <text x="1262" y="642" text-anchor="middle" font-size="44" font-weight="700" fill="#9ef0e4">opencode agent</text>
 
   <!-- Verbindungslinien zum geteilten Baum (dick, volle Deckkraft) -->
-  <path d="M498 488 C 630 492 690 505 738 528" fill="none" stroke="#ffb35c" stroke-width="7" stroke-linecap="round"/>
-  <path d="M1164 488 C 1030 492 970 505 934 528" fill="none" stroke="#5eead4" stroke-width="7" stroke-linecap="round"/>
-  <circle cx="742" cy="530" r="10" fill="#ffb35c"/>
-  <circle cx="930" cy="530" r="10" fill="#5eead4"/>
+  <path d="M498 512 C 634 540, 679 554, 723 556" fill="none" stroke="#ffb35c" stroke-width="7" stroke-linecap="round"/>
+  <path d="M1164 512 C 1030 540, 999 556, 958 554" fill="none" stroke="#5eead4" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="719" cy="556" r="10" fill="#ffb35c"/>
+  <circle cx="954" cy="556" r="10" fill="#5eead4"/>
 
   <!-- Geteilter Projektbaum: gefuellt, hell, mit Glow -->
   <ellipse cx="836" cy="540" rx="200" ry="120" fill="url(#folderGlow)"/>
   <g>
-    <path d="M726 476 l26 0 h20 l11 13 h107 a9 9 0 0 1 9 9 v88 a9 9 0 0 1 -9 9 h-152 a9 9 0 0 1 -9 -9 v-101 a9 9 0 0 1 9 -9 z" fill="#5eead4"/>
-    <path d="M726 476 l26 0 h20 l11 13 h107 a9 9 0 0 1 9 9 v10 h-173 v-23 a9 9 0 0 1 9 -9 z" fill="#8af5e5"/>
-    <rect x="762" y="514" width="64" height="8" rx="4" fill="#0b3a4a" fill-opacity="0.45"/>
-    <rect x="762" y="532" width="96" height="8" rx="4" fill="#0b3a4a" fill-opacity="0.45"/>
-    <rect x="762" y="550" width="48" height="8" rx="4" fill="#0b3a4a" fill-opacity="0.45"/>
+    <path d="M750 476 l26 0 h20 l11 13 h107 a9 9 0 0 1 9 9 v88 a9 9 0 0 1 -9 9 h-152 a9 9 0 0 1 -9 -9 v-101 a9 9 0 0 1 9 -9 z" fill="#5eead4"/>
+    <path d="M750 476 l26 0 h20 l11 13 h107 a9 9 0 0 1 9 9 v10 h-173 v-23 a9 9 0 0 1 9 -9 z" fill="#8af5e5"/>
+    <rect x="786" y="514" width="64" height="8" rx="4" fill="#0b3a4a" fill-opacity="0.45"/>
+    <rect x="786" y="532" width="96" height="8" rx="4" fill="#0b3a4a" fill-opacity="0.45"/>
+    <rect x="786" y="550" width="48" height="8" rx="4" fill="#0b3a4a" fill-opacity="0.45"/>
   </g>
   <text x="836" y="672" text-anchor="middle" font-size="40" font-weight="700" fill="#eaf6fa">shared project tree</text>
 
